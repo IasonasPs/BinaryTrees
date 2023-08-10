@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyTree.Interfaces
 {
-    internal interface IBinaryTree<T> where T : IComparable<T>
+    internal interface IBinaryTree
     {
-        INode<T> Root { get; }
-        INode<T> L { get; }
-        INode<T> R { get; }
-
-        void Add(T value);
-        void Display(INode<T> node);
     }
 }

@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyTree.Interfaces
 {
-    public interface INode<T> where T : IComparable<T>
+    internal interface INode
     {
-        T value { get; }
 
-        INode<T> L { get; set; }
-        INode<T> R { get; set; }
-
-        void Add(T value);
     }
 }
