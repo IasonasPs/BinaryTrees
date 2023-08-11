@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyTree.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace MyTree.Tree
 {
-    internal class Node<T> where T : IComparable<T>
+    internal class Node<T> : INode<T> where T : IComparable<T>
     {
-        T _value { get; set; }
 
-        public Node<T> Left;
-        public Node<T> Right;
+        public T _value { get; private set; }
+
+
+        public Node<T> Left { get; private set; }
+        public Node<T> Right { get; private set; }
 
         public Node(T value)
         {
@@ -44,7 +47,6 @@ namespace MyTree.Tree
             }
 
         }
-
 
         public void Display()
         {
